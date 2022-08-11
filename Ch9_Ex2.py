@@ -5,12 +5,12 @@
 # out the contents of your dictionary (order does not matter).
 
 fhand = open('mbox-short.txt')
-counts = dict()
+counts = {}
 for lines in fhand:
     if lines.startswith('From'):
         words = lines.split()
-        if len(words)>3:
-            counts[words[2]] = counts.get(words[2],0)+1
+        if len(words) > 3:
+            counts[words[2]] = counts.get(words[2], 0) + 1
         else:
             continue
     else:
